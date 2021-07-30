@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.svg" type="image/png" sizes="16x16">
+    <title>edu workstation</title>
+
+    <style>
+        .main-header{
+
+            font-family: "Viner Hand ITC";
+            font-size: 30px;
+            margin-top: -50px;
+            margin-bottom: -75px;
+
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: white url("1.jpg") repeat scroll top;
+            border-radius: 3px;
+
+        }
+        nav{
+
+            box-shadow: 0 0 15px black;
+            border: 5px solid black;
+            border-radius: 50px;
+            overflow: hidden;
+
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li{
+            float:right;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: orange;
+            padding: 12px 25px;
+            font-size: 18px;
+            display: inline-block;
+        }
+        nav ul li a:hover{
+            background-color:gray;
+
+        }
+        .dropdown_list{
+            background-color: black;
+            position: absolute; /* to stick with parent */
+            display: none; /* to hide the list */
+
+        }
+        .dropdown_list a{
+            display: block;
+        }
+        .dropdown:hover .dropdown_list{
+            display: block; /* to display the list */
+            z-index: 10;
+
+
+        }
+        img{
+            height: 200px;
+            width: 300px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 3px solid red;
+            box-shadow: 0 0 15px cyan;
+            transition: all 2s;
+        }
+        img:hover{
+            height: 200px;
+            width: 300px;
+            border: 3px solid cyan;
+            box-shadow: 0 0 15px red;
+            transition: all 2s;
+
+        }
+        .form-div{
+            margin-top: 39px;
+            margin-left: 15px;
+        }
+        .notice{
+            text-align: center;
+            width: 95%;
+            margin: auto;
+            font-size: 18px;
+            padding: 10px;
+            border: 0px solid black;
+            border-radius: 60px;
+            overflow: hidden;
+            color: whitesmoke;
+
+        }
+        .notice p{
+            margin: 0;
+            animation: notice 40s infinite linear;
+        }
+        @keyframes notice {
+            0% {
+                transform: translateX(80%);
+            }
+            100% {
+                transform: translateX(-80%);
+            }
+        }
+        .simple{
+            width: 100px;
+            height: 100px;
+            background-color: lightseagreen;
+            border-radius: 50%;
+            box-shadow: 0 0 15px black;
+            border: 20px solid skyblue;
+            animation: abc 4s infinite linear;
+            font-weight: 600;
+
+
+
+        }
+        @keyframes abc {
+            0%,50%,100%{
+                background-color: skyblue;
+                border-color: lightseagreen;
+            }
+            25%,75%{
+                background-color: lightseagreen;
+                border-color: skyblue;
+            }
+        }
+        .spin{
+            width: 20px;
+            height: 5px;
+            border: 10px solid skyblue;
+            box-shadow: 0 0 15px black;
+            border-radius: 50%;
+            border-top: 10px solid deepskyblue;
+            animation: spin 1s infinite linear;
+            float: right;
+            margin-top: -30px;
+            margin-right: 4px;
+        }
+        @keyframes spin {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Main Header -->
+<header class="main-header">
+    <h1>Edu Workstation</h1>
+</header>
+
+<nav  id="user">
+    <ul>
+
+        <li>
+            <a href="#"><i class="fa fa-id-card"></i>About Us</a>
+        </li>
+
+        <li class="dropdown ">
+            <a href="#"><i class="fa fa-image"></i>Sign up</a>
+            <div class="dropdown_list">
+                <a href="admin.html">admin</a>
+                <a href="writter.html">writter</a>
+ 
+            </div>
+
+        </li>
+                   <li>    
+            <a href="#"><i class="fa fa-laptop"></i>admin</a>
+                  
+         </li>
+
+            <li>    
+            <a href="#"><i class="fa fa-home"></i>Home</a>
+                  
+         </li>
+
+
+
+        <li style="float: right">
+
+        </li>
+
+    </ul>
+</nav>
+
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <form class="contact100-form validate-form">
+                <span class="contact100-form-title">
+                    Start session!
+                </span>
+
+                <div class="wrap-input100 input100-select">
+                    <span class="label-input100">Number pages writen today</span>
+                    <div>
+                        <select class="selection-2" name="budget">
+                            <option>none</option>
+                            <option>1</option>
+                            <option>more than 1</option>
+                        </select>
+                    </div>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 input100-select">
+                    <span class="label-input100">Number orders this week</span>
+                    <div>
+                        <select class="selection-2" name="budget">
+                             <option>none</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                             <option>more than 7</option>
+                        </select>
+                    </div>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 input100-select">
+                    <span class="label-input100">order level </span>
+                    <div>
+                        <select class="selection-2" name="service">
+                            <option>Hard</option>
+                            <option>Medium</option>
+                            <option>Easy</option>
+>
+                        </select>
+                    </div>
+                    <span class="focus-input100"></span>
+                </div>
+
+
+
+                <div class="wrap-input100 validate-input" data-validate = "Message is required">
+                    <span class="label-input100">Message</span>
+                    <textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+                <div id="testbutton"></div>
+                        
+
+            </form>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+    <script src="firebase.js"></script>
+	<script src="xxx.js"></script>
+
+</body>
+
+<footer class="main-footer">
+    <h3>edu workstation</h3>
+    <p>All Rights Reserved</p>
+    <p>Developed & Maintained by
+        <a href="https://github.com/luna40" target="_blank">
+            <i class="fa fa-user-circle"></i> luna lilith
+        </a>
+    </p>
+</footer>
